@@ -1,14 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Heroes {
+public class Hero {
     private String mName;
     private String mAge;
     private String mSuperpower;
     private String mWeakness;
     private String mCause;
 
-    public Heroes(String name, String age, String superpower, String weakness ,String cause) {
+    public Hero(String name, String age, String superpower, String weakness , String cause) {
         mName = name;
         mAge = age;
         mSuperpower = superpower;

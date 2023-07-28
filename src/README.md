@@ -15,7 +15,7 @@ This is a java app that enables a user create a hero and a squad and also the us
   - [portfolio](https://github.com/ArnoldOduma/portfolio) - My portfolio website 
 
 ## Demo
-<img src="./demo.png" width="100%"/>
+<img src="../demo.png" width="100%"/>
 
 ## Getting Started
 

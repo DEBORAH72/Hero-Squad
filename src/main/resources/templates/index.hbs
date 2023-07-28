@@ -1,12 +1,15 @@
- <center>
-        <h1>HeroSquad App</h1>
-            <div class="space"></div>
-            <div class="intro">
-                <p class="center">
-                    An app that allows you to recruit a well-balanced team of superheroes (or any other character-type of your choosing).
-                </p>
-                <a href='/hero'>Add Hero</a>
-                <a href='/hero'>Add Squad</a>
-            </div>
-
-        </center>
+ {{#partial "content"}}
+<section class="landing-pg">
+    <div class="land-left">
+    </div>
+    <div class="land-right">
+    </div>
+    <div class="hero-img">
+    </div>
+    <div class="hero-desc">
+      <h3>Let's Make You  a Hero</h3>
+        <a href="/hero-form"><button class="hero-btn btns">Create Hero</button></a>
+    </div>
+  </section>
+{{/partial}}
+{{> layout.hbs}}

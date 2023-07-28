@@ -1,32 +1,56 @@
+package models;
+
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class HeroTest {
-    @Test
-    public void Hero_instantiateCorrectly_true() {
-        Hero myHero = new Hero("Joker", "34", "Acid", "Batman", "Selfish");
-        assertTrue(myHero instanceof Hero);
-    }
 
     @Test
-    public void getName_getNameForHeroes_String() {
-        Hero myHero = new Hero("Flash", "23", "Speed", "Kryptonite", "Humanity");
-        String expected = "Flash";
-        assertEquals(expected, myHero.getmName());
+    public void newHero_instantiatesCorrectly_true() {
+        Hero newHero = Hero.setUpNewHero();
+        assertTrue(newHero instanceof Hero);
     }
-
     @Test
-    public void getAge_getAgeForHeroes_int() {
-        Hero myHero = new Hero("Storm", "35", "Lightning", "Fire", "Savior");
-        String expected = "35";
-        assertEquals(expected, myHero.getmAge());
+    public void newHero_getName_String() {
+        Hero newHero = Hero.setUpNewHero();
+        assertEquals("Arnold",newHero.getName());
     }
-
     @Test
-    public void getPower_getPowerForHeroes_String() {
-        Hero myHero = new Hero("Batman", "33", "Wealth", "Joker", "Selfless");
-        String expected = "Wealth";
-        assertEquals(expected, myHero.getmSuperpower());
+    public void newHero_getAge_Int() {
+        Hero newHero = Hero.setUpNewHero();
+        assertEquals(23,newHero.getAge());
     }
-
+    @Test
+    public void newHero_getPower_String() {
+        Hero newHero = Hero.setUpNewHero();
+        assertEquals("flying",newHero.getPower());
+    }
+    @Test
+    public void newHero_getWeakness_String() {
+        Hero newHero = Hero.setUpNewHero();
+        assertEquals("fire",newHero.getWeakness());
+    }
+    @Test
+    public void newHero_getAllInstances_true() {
+        Hero newHero = Hero.setUpNewHero();
+        Hero another = Hero.setUpNewHero();
+        assertTrue(Hero.getAllInstances().contains(newHero));
+        assertTrue(Hero.getAllInstances().contains(another));
+    }
+    @Test
+    public void newHero_getId_Int() {
+        Hero.clearAllHeroes();
+        Hero newHero = Hero.setUpNewHero();
+        Hero another = Hero.setUpNewHero();
+        Hero another1 = Hero.setUpNewHero();
+        assertEquals(3,another1.getId());
+    }
+    @Test
+    public void newHero_findById_id() {
+        Hero.clearAllHeroes();
+        Hero newHero = Hero.setUpNewHero();
+        Hero another = Hero.setUpNewHero();
+        assertEquals(2,Hero.findById(another.getId()).getId());
+    }
 }

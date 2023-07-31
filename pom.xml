@@ -1,195 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
-  <version>1.0</version>
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.7.2</version> <!-- Updated to the safe version -->
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.20.2</version> <!-- Replace with the latest version available -->
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-handlebars</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.7.2</version> <!-- Replace with the latest version available -->
+        </dependency>
 
-  <dependencies>
-<!-- We need to list out ALL dependencies our project needs. If you have dependencies not listed here, but sure to add them -->
-    <dependency>
-      <groupId>com.sparkjava</groupId>
-      <artifactId>spark-core</artifactId>
-      <version>2.2</version>
-    </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version> <!-- Replace with the latest version available -->
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb.spark</groupId>
+            <artifactId>mongo-spark-connector</artifactId>
+            <version>10.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb.spark</groupId>
+            <artifactId>mongo-spark-connector</artifactId>
+            <version>10.0.5</version>
+        </dependency>
+    </dependencies>
 
-    <!-- https://mvnrepository.com/artifact/com.sparkjava/spark-template-handlebars -->
-    <dependency>
-        <groupId>com.sparkjava</groupId>
-        <artifactId>spark-template-handlebars</artifactId>
-        <version>1.0.0</version>
-    </dependency>
-
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>test</scope>
-    </dependency>
-      <dependency>
-          <groupId>com.sparkjava</groupId>
-          <artifactId>spark-template-handlebars</artifactId>
-          <version>2.7.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.sparkjava</groupId>
-          <artifactId>spark-template-handlebars</artifactId>
-          <version>2.7.1</version>
-      </dependency>
-      <dependency>
-          <groupId>noir-template</groupId>
-          <artifactId>noir-template</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>wisui-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.1</version>
-      </dependency>
-      <dependency>
-          <groupId>fu-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>electron-template</groupId>
-          <artifactId>clj-template</artifactId>
-          <version>0.0.1-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>enfocus-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>nes-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>fw1-template</groupId>
-          <artifactId>fw1-template</artifactId>
-          <version>0.1.1</version>
-      </dependency>
-      <dependency>
-          <groupId>full-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.2.5</version>
-      </dependency>
-      <dependency>
-          <groupId>gen_template</groupId>
-          <artifactId>gen_template</artifactId>
-          <version>0.1.3a</version>
-      </dependency>
-      <dependency>
-          <groupId>elbenwald-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.25.0</version>
-      </dependency>
-      <dependency>
-          <groupId>favfeed-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>tamaki-template</groupId>
-          <artifactId>tamaki-template</artifactId>
-          <version>0.2.0.0</version>
-      </dependency>
-      <dependency>
-          <groupId>template-string</groupId>
-          <artifactId>template-string</artifactId>
-          <version>0.1.1</version>
-      </dependency>
-      <dependency>
-          <groupId>template-replace</groupId>
-          <artifactId>template-replace</artifactId>
-          <version>0.1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>broken-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>allergy-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>system-template</groupId>
-          <artifactId>boot-template</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>os_template</groupId>
-          <artifactId>os_template</artifactId>
-          <version>1.0.1</version>
-      </dependency>
-      <dependency>
-          <groupId>ring-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>quil-template</groupId>
-          <artifactId>lein-template</artifactId>
-          <version>0.1.1</version>
-      </dependency>
-
-  </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <archive>
-            <!-- Change this to YOUR main class name if different. Usually, it will be App. -->
-            <manifest>
-              <mainClass>App</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.heroku.sdk</groupId>
-
-        <artifactId>heroku-maven-plugin</artifactId>
-        <version>2.0.3</version>
-        <configuration>
-          <jdkVersion>1.8</jdkVersion>
-          <!-- Change this to YOUR application name! -->
-          <appName>techspaceke-hero-squad</appName>
-          <processTypes>
-            <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
-          </processTypes>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Updated to a newer version -->
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version> <!-- Updated to a newer version -->
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <!-- Change this to YOUR main class name if different. Usually, it will be App. -->
+                        <manifest>
+                            <mainClass>App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.3</version> <!-- Updated to a newer version -->
+                <configuration>
+                    <jdkVersion>1.8</jdkVersion>
+                    <!-- Change this to YOUR application name! -->
+                    <appName>whitespace-hero-squad</appName>
+                    <processTypes>
+                        <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
+                    </processTypes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

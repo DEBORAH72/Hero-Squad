@@ -22,8 +22,8 @@ public class Hero {
 
     public String getName() {return this.name;}
         public void getCv() {
-        String cv = this.name && this.power;
-    }
+            String cv = this.name + " " + this.power;
+        }
     public int getAge() {return this.age;}
     public String getPower() {return this.power;}
     public String getWeakness() {return this.weakness;}

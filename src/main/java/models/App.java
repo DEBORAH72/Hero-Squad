@@ -5,7 +5,6 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.*;
@@ -112,9 +111,12 @@ public class App {
             model.put("item", newMember.getName());
             model.put("newHero",newSquad.getSquadName());
             return new ModelAndView(model, "success.hbs");
-        }, new HandlebarsTemplateEngine());
+        },new HandlebarsTemplateEngine());
 
 
+    }
+
+    private static void staticFileLocation(String s) {
     }
 
     private static void port(Integer port) {

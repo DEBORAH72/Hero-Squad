@@ -1,17 +1,15 @@
 package models;
 
-import javax.swing.text.html.HTMLWriter;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Hero {
 
-    private String name;
-    private int age;
-    private String power;
-    private String weakness;
-    private int id;
-    private static ArrayList<Hero> instances = new ArrayList<>();
+    private final String name;
+    private final int age;
+    private final String power;
+    private final String weakness;
+    private final int id;
+    private static final ArrayList<Hero> instances = new ArrayList<>();
 
     public Hero(String name, Integer age, String power, String weakness) {
         this.name = name;
@@ -23,9 +21,9 @@ public class Hero {
     }
 
     public String getName() {return this.name;}
-    //    public String getCv() {
-//        String cv = this.name && this.power;
-//    }
+        public void getCv() {
+        String cv = this.name && this.power;
+    }
     public int getAge() {return this.age;}
     public String getPower() {return this.power;}
     public String getWeakness() {return this.weakness;}

@@ -3,16 +3,8 @@
 This is a java app that enables a user create a hero and a squad and also the user can add a hero to a squad
 ## Author
 
-* **Arnold Oduma** 
+* **Deborah** 
 
-### -*Initial works*-
-  - [Github Search](https://github.com/ArnoldOduma/git-search) - An app to search github users and their repositories
-  - [Quotes](https://github.com/ArnoldOduma/quotes) - An app that enables a user create quotes and delete quotes they don't want
-  - [Goals](https://github.com/ArnoldOduma/goals-application) - This is an application to create goals and checkout the ones you completed
-  - [Pig Dice](https://github.com/ArnoldOduma/Pig-Dice) - This is a simole java script game of pigdice
-  - [Delani Studio](https://github.com/ArnoldOduma/Delani_Studio) - A front end of a studio website
-  - [Triangle Tracker](https://github.com/ArnoldOduma/triangle-tracker) - Tracks what type a triangle is by checking its length width and height
-  - [portfolio](https://github.com/ArnoldOduma/portfolio) - My portfolio website 
 
 ## Demo
 <img src="../demo.png" width="100%"/>
